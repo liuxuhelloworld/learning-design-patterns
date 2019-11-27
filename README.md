@@ -1,2 +1,1 @@
-# learning-design-patterns
-Design patterns example code
+Example code for learning design patterns
