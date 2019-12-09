@@ -7,6 +7,10 @@ public class PersonBeanImpl implements PersonBean {
     private int rating = 0;
     private int ratingCount = 0;
 
+    public PersonBeanImpl(String name) {
+        this.name = name;
+    }
+
     @Override
     public String getName() {
         return name;
