@@ -36,11 +36,53 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
         notifyBPMObservers();
     }
 
-    private void notifyBPMObservers() {
+    @Override
+    public int getBPM() {
+        return bpm;
+    }
+
+    @Override
+    public void registerObserver(BeatObserver observer) {
+        beatObservers.add(observer);
+    }
+
+    public void notifyBPMObservers() {
         bpmObservers.stream().forEach(BPMObserver::updateBPM);
     }
 
-    private void setUpMidi() {
+    @Override
+    public void registerObserver(BPMObserver observer) {
+        bpmObservers.add(observer);
+    }
+
+    public void notifyBeatObservers() {
+        beatObservers.stream().forEach(BeatObserver::updateBeat);
+    }
+
+    void beatEvent() {
+        notifyBeatObservers();
+    }
+
+    @Override
+    public void removeObserver(BPMObserver observer) {
+        bpmObservers.remove(observer);
+    }
+
+    @Override
+    public void removeObserver(BeatObserver observer) {
+        beatObservers.remove(observer);
+    }
+
+    @Override
+    public void meta(MetaMessage message) {
+        if (message.getType() == 47) {
+            beatEvent();
+            sequencer.start();
+            setBPM(getBPM());
+        }
+    }
+
+    public void setUpMidi() {
         try {
             sequencer = MidiSystem.getSequencer();
             sequencer.open();
@@ -80,7 +122,7 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
         }
     }
 
-    public  MidiEvent makeEvent(int comd, int chan, int one, int two, int tick) {
+    public MidiEvent makeEvent(int comd, int chan, int one, int two, int tick) {
         MidiEvent event = null;
         try {
             ShortMessage a = new ShortMessage();
