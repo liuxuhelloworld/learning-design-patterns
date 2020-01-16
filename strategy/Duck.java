@@ -8,7 +8,7 @@ public abstract class Duck {
 	public abstract void display();
 
 	public void swim() {
-		System.out.println("swim...");
+		System.out.println("swim");
 	}
 
 	public void setQuackBehavior(QuackBehavior quackBehavior) {

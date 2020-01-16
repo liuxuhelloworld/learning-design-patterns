@@ -6,6 +6,7 @@ public class MallardDuck extends Duck {
 		flyBehavior = new FlyWithWings();
 	}
 
+	@Override
 	public void display() {
 		System.out.println("MallardDuck");
 	}
