@@ -1,4 +1,4 @@
-package observer.push;
+package observer.weatherstation;
 
 public class HeatIndexDisplay implements Observer, DisplayElement {
     private Subject weatherData;

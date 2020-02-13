@@ -1,4 +1,4 @@
-package observer.push;
+package observer.weatherstation;
 
 public interface Observer {
     void update(float temp, float humidity, float pressure);

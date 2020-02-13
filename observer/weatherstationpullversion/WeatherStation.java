@@ -1,4 +1,4 @@
-package observer.pull;
+package observer.weatherstationpullversion;
 
 public class WeatherStation {
     public static void main(String[] args) {

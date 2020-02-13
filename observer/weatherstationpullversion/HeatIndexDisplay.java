@@ -1,4 +1,4 @@
-package observer.pull;
+package observer.weatherstationpullversion;
 
 import java.util.Observer;
 import java.util.Observable;

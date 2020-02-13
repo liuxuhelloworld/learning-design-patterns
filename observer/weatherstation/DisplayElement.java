@@ -1,4 +1,4 @@
-package observer.pull;
+package observer.weatherstation;
 
 public interface DisplayElement {
     void display();

@@ -1,4 +1,4 @@
-package observer.push;
+package observer.weatherstationpullversion;
 
 public interface DisplayElement {
     void display();
