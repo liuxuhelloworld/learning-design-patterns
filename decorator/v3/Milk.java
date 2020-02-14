@@ -1,9 +1,9 @@
-package decorator;
+package decorator.v3;
 
-public class SteamedMilk extends CondimentDecorator {
+public class Milk extends CondimentDecorator {
 	private Beverage beverage;
 
-	public SteamedMilk(Beverage beverage) {
+	public Milk(Beverage beverage) {
 		this.beverage = beverage;
 	}
 

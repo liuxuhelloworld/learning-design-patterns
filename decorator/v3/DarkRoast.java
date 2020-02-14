@@ -1,4 +1,4 @@
-package decorator;
+package decorator.v3;
 
 public class DarkRoast extends Beverage {
 	public DarkRoast() {

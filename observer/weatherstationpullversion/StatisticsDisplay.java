@@ -1,5 +1,7 @@
 package observer.weatherstationpullversion;
 
+import observer.weatherstation.DisplayElement;
+
 import java.util.Observer;
 import java.util.Observable;
 
