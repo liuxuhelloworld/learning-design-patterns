@@ -15,9 +15,9 @@ public class StarbuzzCoffee {
 		System.out.println(beverage2 + " $" + beverage2.cost());
 
 		Beverage beverage3= new HouseBlend();
-		beverage3.addCondiment(soy);
-		beverage3.addCondiment(mocha);
 		beverage3.addCondiment(whip);
+		beverage3.addCondiment(mocha);
+		beverage3.addCondiment(soy);
 		System.out.println(beverage3 + " $" + beverage3.cost());
 	}
 }
