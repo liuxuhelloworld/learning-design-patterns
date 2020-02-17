@@ -3,17 +3,13 @@ package factory.v3;
 public class NYPizzaStore extends PizzaStore {
     public Pizza createPizza(String type) {
         Pizza pizza = null;
-        PizzaIngredientFactory ingredientFactory = new NYPizzaIngredientFactory();
 
         if (type.equals("cheese")) {
-            pizza = new CheesePizza(ingredientFactory);
-            pizza.setName("NY Style Cheese Pizza");
+            pizza = new NYCheesePizza();
         } else if (type.equals("veggie")) {
-            pizza = new VeggiePizza(ingredientFactory);
-            pizza.setName("NY Style Veggie Pizza");
+            pizza = new NYVeggiePizza();
         } else if (type.equals("clam")) {
-            pizza = new ClamPizza(ingredientFactory);
-            pizza.setName("NY Style Clam Pizza");
+            pizza = new NYClamPizza();
         }
 
         return pizza;

@@ -1,26 +1,26 @@
-package factory.v3;
+package factory.v4;
 
 import factory.ingredients.*;
 
 public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
     public Dough createDough() {
-        return new Dough2();
+        return new ChicagoDough();
     }
 
     public Sauce createSauce() {
-        return new Sauce1();
+        return new NYSauce();
     }
 
     public Cheese createCheese() {
-        return new Cheese2();
+        return new ChicagoCheese();
     }
 
     public Veggies[] createVeggies() {
-        Veggies[] veggies = {new Veggies1(), new Veggies2()};
+        Veggies[] veggies = {new NYVeggies1(), new NYVeggies2()};
         return veggies;
     }
 
     public Clam createClam() {
-        return new Clam1();
+        return new NYClam();
     }
 }
