@@ -1,6 +1,6 @@
 package factory.v4;
 
-public class PizzaTest {
+public class PizzaStoreTest {
     public static void main(String[] args) {
         PizzaStore nyStore = new NYPizzaStore();
         PizzaStore chicagoStore = new ChicagoPizzaStore();

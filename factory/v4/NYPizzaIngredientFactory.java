@@ -4,7 +4,7 @@ import factory.ingredients.*;
 
 public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
     public Dough createDough() {
-        return new ChicagoDough();
+        return new NYDough();
     }
 
     public Sauce createSauce() {
@@ -12,12 +12,11 @@ public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
     }
 
     public Cheese createCheese() {
-        return new ChicagoCheese();
+        return new NYCheese();
     }
 
     public Veggies[] createVeggies() {
-        Veggies[] veggies = {new NYVeggies1(), new NYVeggies2()};
-        return veggies;
+        return new Veggies[] {new NYVeggies1(), new NYVeggies2()};
     }
 
     public Clam createClam() {
