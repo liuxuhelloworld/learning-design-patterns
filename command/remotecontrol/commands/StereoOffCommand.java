@@ -1,4 +1,7 @@
-package command;
+package command.remotecontrol.commands;
+
+import command.remotecontrol.Command;
+import command.remotecontrol.vendors.Stereo;
 
 public class StereoOffCommand implements Command {
     private Stereo stereo;

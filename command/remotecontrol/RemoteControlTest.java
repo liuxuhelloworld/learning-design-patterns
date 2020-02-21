@@ -1,6 +1,12 @@
-package command;
+package command.remotecontrol;
 
-public class RemoteTest {
+import command.remotecontrol.commands.*;
+import command.remotecontrol.vendors.CeilingFan;
+import command.remotecontrol.vendors.GarageDoor;
+import command.remotecontrol.vendors.Light;
+import command.remotecontrol.vendors.Stereo;
+
+public class RemoteControlTest {
     public static void main(String[] args) {
         RemoteControlWithUndo remote = new RemoteControlWithUndo();
 

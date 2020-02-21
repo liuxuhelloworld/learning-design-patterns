@@ -1,4 +1,4 @@
-package command;
+package command.remotecontrol.vendors;
 
 public class GarageDoor {
     public void up() {

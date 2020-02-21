@@ -1,11 +1,7 @@
-package command;
+package command.remotecontrol.vendors;
 
 public class Stereo {
     private String loc;
-
-    public Stereo() {
-        this.loc = "";
-    }
 
     public Stereo(String loc) {
         this.loc = loc;

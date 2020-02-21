@@ -1,16 +1,19 @@
-package command;
+package command.remotecontrol.commands;
 
-public class CeilingFanHighCommand implements Command {
+import command.remotecontrol.Command;
+import command.remotecontrol.vendors.CeilingFan;
+
+public class CeilingFanLowCommand implements Command {
     private CeilingFan ceilingFan;
     private int prevSpeed;
 
-    public CeilingFanHighCommand(CeilingFan ceilingFan) {
+    public CeilingFanLowCommand(CeilingFan ceilingFan) {
         this.ceilingFan = ceilingFan;
     }
 
     public void execute() {
         prevSpeed = ceilingFan.getSpeed();
-        ceilingFan.high();
+        ceilingFan.low();
     }
 
     public void undo() {

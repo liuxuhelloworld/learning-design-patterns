@@ -1,10 +1,15 @@
-package command;
+package command.remotecontrol;
 
-public class SimpleRemoteTest {
+import command.remotecontrol.commands.GarageDoorUpCommand;
+import command.remotecontrol.commands.LightOnCommand;
+import command.remotecontrol.vendors.GarageDoor;
+import command.remotecontrol.vendors.Light;
+
+public class SimpleRemoteControlTest {
     public static void main(String[] args) {
         SimpleRemoteControl remote = new SimpleRemoteControl();
 
-        Light light = new Light();
+        Light light = new Light("Door");
         LightOnCommand lightOn = new LightOnCommand(light);
 
         GarageDoor garageDoor = new GarageDoor();

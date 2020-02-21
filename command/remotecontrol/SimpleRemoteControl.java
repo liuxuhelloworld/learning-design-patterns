@@ -1,4 +1,4 @@
-package command;
+package command.remotecontrol;
 
 public class SimpleRemoteControl {
     private Command slot;

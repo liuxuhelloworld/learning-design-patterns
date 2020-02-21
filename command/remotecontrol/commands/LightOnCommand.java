@@ -1,4 +1,7 @@
-package command;
+package command.remotecontrol.commands;
+
+import command.remotecontrol.Command;
+import command.remotecontrol.vendors.Light;
 
 public class LightOnCommand implements Command {
     private Light light;

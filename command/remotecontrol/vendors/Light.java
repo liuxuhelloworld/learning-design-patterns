@@ -1,11 +1,7 @@
-package command;
+package command.remotecontrol.vendors;
 
 public class Light {
     private String loc;
-
-    public Light() {
-        this.loc = "";
-    }
 
     public Light(String loc) {
         this.loc = loc;

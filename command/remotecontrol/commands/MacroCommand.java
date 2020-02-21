@@ -1,4 +1,6 @@
-package command;
+package command.remotecontrol.commands;
+
+import command.remotecontrol.Command;
 
 public class MacroCommand implements Command {
     private Command[] commands;
