@@ -1,4 +1,4 @@
-package adapter;
+package adapter.duckandturkey;
 
 public class WildTurkey implements Turkey {
     public void gobble() {

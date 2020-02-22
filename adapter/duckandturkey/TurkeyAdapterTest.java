@@ -1,10 +1,10 @@
-package adapter;
+package adapter.duckandturkey;
 
-public class DuckTestDrive {
+public class TurkeyAdapterTest {
     public static void main(String[] args) {
-        MallardDuck duck = new MallardDuck();
+        Duck duck = new MallardDuck();
 
-        WildTurkey turkey = new WildTurkey();
+        Turkey turkey = new WildTurkey();
 
         Duck turkeyAdapter = new TurkeyAdapter(turkey);
 

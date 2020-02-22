@@ -1,4 +1,4 @@
-package adapter;
+package adapter.duckandturkey;
 
 public class MallardDuck implements Duck {
     public void quack() {

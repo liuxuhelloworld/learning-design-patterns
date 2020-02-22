@@ -1,4 +1,4 @@
-package adapter;
+package adapter.duckandturkey;
 
 import java.util.Random;
 
