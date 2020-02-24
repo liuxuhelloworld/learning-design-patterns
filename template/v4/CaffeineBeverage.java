@@ -1,6 +1,6 @@
-package template;
+package template.v4;
 
-public abstract class CaffeineBeverageWithHook {
+public abstract class CaffeineBeverage {
     public final void prepareRecipe() {
         boilWater();
         brew();
@@ -15,11 +15,11 @@ public abstract class CaffeineBeverageWithHook {
 
     public abstract void addCondiments();
 
-    public void boilWater() {
+    public final void boilWater() {
         System.out.println("Boiling water");
     }
 
-    public void pourInCup() {
+    public final void pourInCup() {
         System.out.println("Pouring into cup");
     }
 
