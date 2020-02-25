@@ -1,16 +1,15 @@
-package iterator.v4;
+package iterator.v3;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class MenuTest {
+public class WaitressTest {
     public static void main(String[] args) {
         PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
         DinerMenu dinerMenu = new DinerMenu();
-        CafeMenu cafeMenu = new CafeMenu();
 
-        ArrayList<Menu> menus = new ArrayList<Menu>();
-        Collections.addAll(menus, pancakeHouseMenu, dinerMenu, cafeMenu);
+        ArrayList<Menu> menus = new ArrayList<>();
+        Collections.addAll(menus, pancakeHouseMenu, dinerMenu);
 
         Waitress waitress = new Waitress(menus);
         waitress.printMenu();
