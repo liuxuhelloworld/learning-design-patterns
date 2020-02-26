@@ -1,6 +1,6 @@
 package composite.v2;
 
-public class MenuTest {
+public class WaitressTest {
     public static void main(String[] args) {
         MenuComponent pancakeHouseMenu = new Menu("Pancake House Menu", "Pancake House Menu Desc");
         MenuComponent dinerMenu = new Menu("Diner Menu", "Diner Menu Desc");

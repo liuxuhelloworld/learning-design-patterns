@@ -15,11 +15,11 @@ public class CompositeIterator implements Iterator<MenuComponent> {
             return false;
         } else {
             Iterator<MenuComponent> iterator = stack.peek();
-            if (!iterator.hasNext()) {
+            if (iterator.hasNext()) {
+                return true;
+            } else {
                 stack.pop();
                 return hasNext();
-            } else {
-                return true;
             }
         }
     }
