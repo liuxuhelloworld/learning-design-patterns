@@ -1,4 +1,4 @@
-package proxy.v1;
+package proxy.remote.v1;
 
 public class GumballMachine {
     private State noQuarterState;

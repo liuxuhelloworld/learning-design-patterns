@@ -1,4 +1,4 @@
-package proxy.v1;
+package proxy.remote.v1;
 
 import java.util.Random;
 

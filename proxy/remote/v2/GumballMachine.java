@@ -1,4 +1,4 @@
-package proxy.v3;
+package proxy.remote.v2;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;

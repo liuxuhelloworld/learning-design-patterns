@@ -1,4 +1,4 @@
-package proxy.v3;
+package proxy.remote.v2;
 
 public class SoldOutState implements State {
     private transient GumballMachine gumballMachine;

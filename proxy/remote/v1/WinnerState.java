@@ -1,7 +1,7 @@
-package proxy.v3;
+package proxy.remote.v1;
 
 public class WinnerState implements State {
-    private transient GumballMachine gumballMachine;
+    private GumballMachine gumballMachine;
 
     public WinnerState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;

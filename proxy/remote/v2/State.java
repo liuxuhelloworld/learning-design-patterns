@@ -1,4 +1,4 @@
-package proxy.v3;
+package proxy.remote.v2;
 
 import java.io.Serializable;
 
