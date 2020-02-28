@@ -40,15 +40,12 @@ public class ImageProxy implements Icon {
             g.drawString("Loading, please wait...", x + 300, y + 190);
             if (!retrieving) {
                 retrieving = true;
-                retrieveThread = new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            imageIcon = new ImageIcon(imageUrl, "CD Cover");
-                            c.repaint();
-                        } catch (Exception ex) {
-                            ex.printStackTrace();
-                        }
+                retrieveThread = new Thread(() -> {
+                    try {
+                        imageIcon = new ImageIcon(imageUrl, "CD Cover");
+                        c.repaint();
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
                 });
                 retrieveThread.start();

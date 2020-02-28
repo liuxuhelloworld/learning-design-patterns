@@ -1,24 +1,21 @@
 package proxy.virtual;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Enumeration;
-import java.util.Hashtable;
+import java.util.HashMap;
 
 public class ImageProxyTest {
     private ImageComponent imageComponent;
     private JFrame frame = new JFrame("CD Cover Viewer");
     private JMenuBar menuBar;
     private JMenu menu;
-    private Hashtable<String, String> cds = new Hashtable<>();
+    private HashMap<String, String> cds = new HashMap<>();
 
     public ImageProxyTest() throws Exception {
         cds.put("test1", "https://cn.bing.com/th?id=OIP.jmQT4hhUoHssuZm8cPIGUgHaEp&pid=Api&rs=1");
         cds.put("test2", "http://www.basketwallpapers.com/Images-05/Lakers-Roster-2008-09-Wallpaper.jpg");
-        cds.put("test3", "https://clutchpoints.com/wp-content/uploads/2018/11/lebron1.jpg");
+        cds.put("test3", "https://cn.bing.com/th?id=OIP.fPN93tvFUlMeoIUIp4G96gHaFh&pid=Api&rs=1");
 
         URL initial = new URL(cds.get("test1"));
         menuBar = new JMenuBar();
@@ -26,16 +23,13 @@ public class ImageProxyTest {
         menuBar.add(menu);
         frame.setJMenuBar(menuBar);
 
-        for (Enumeration e = cds.keys(); e.hasMoreElements(); ) {
-            String name = (String)e.nextElement();
+        for (String name : cds.keySet()) {
             JMenuItem menuItem = new JMenuItem(name);
             menu.add(menuItem);
-            menuItem.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    imageComponent.setIcon(new ImageProxy(getCDUrl(e.getActionCommand())));
-                    frame.repaint();
-                }
+            Icon icon = new ImageProxy(getCDUrl(name));
+            menuItem.addActionListener(event -> {
+                imageComponent.setIcon(icon);
+                frame.repaint();
             });
         }
 
@@ -49,9 +43,9 @@ public class ImageProxyTest {
 
     private URL getCDUrl(String name) {
         try {
-            return new URL((String)cds.get(name));
-        } catch (MalformedURLException ex) {
-            ex.printStackTrace();
+            return new URL(cds.get(name));
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
             return null;
         }
     }
