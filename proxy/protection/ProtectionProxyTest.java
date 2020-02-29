@@ -2,7 +2,7 @@ package proxy.protection;
 
 import java.lang.reflect.Proxy;
 
-public class MatchMakingTest {
+public class ProtectionProxyTest {
     PersonBean getOwnerProxy(PersonBean person) {
         return (PersonBean) Proxy.newProxyInstance(
             person.getClass().getClassLoader(),
@@ -20,7 +20,7 @@ public class MatchMakingTest {
     }
 
     public static void main(String[] args) {
-        MatchMakingTest test = new MatchMakingTest();
+        ProtectionProxyTest test = new ProtectionProxyTest();
         test.drive();
     }
 

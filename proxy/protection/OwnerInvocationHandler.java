@@ -11,6 +11,7 @@ public class OwnerInvocationHandler implements InvocationHandler {
         this.person = person;
     }
 
+    @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws IllegalAccessException {
         try {
             if (method.getName().startsWith("get")) {
