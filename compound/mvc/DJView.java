@@ -1,17 +1,16 @@
-package mvc;
+package compound.mvc;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.*;
-
 public class DJView implements ActionListener, BeatObserver, BPMObserver {
-    BeatModelInterface model;
-    ControllerInterface controller;
+    BeatModel model;
+    BeatController controller;
     JFrame viewFrame;
     JPanel viewPanel;
-    BeatBar beatBar;
+    DJBeatBar beatBar;
     JLabel bpmOutputLabel;
     JFrame controlFrame;
     JPanel controlPanel;
@@ -25,7 +24,7 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver {
     JMenuItem startMenuItem;
     JMenuItem stopMenuItem;
 
-    public DJView(ControllerInterface controller, BeatModelInterface model) {
+    public DJView(BeatController controller, BeatModel model) {
         this.controller = controller;
         this.model = model;
         model.registerObserver((BeatObserver)this);
@@ -39,7 +38,7 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver {
         viewFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         viewFrame.setSize(new Dimension(100, 80));
         bpmOutputLabel = new JLabel("offline", SwingConstants.CENTER);
-        beatBar = new BeatBar();
+        beatBar = new DJBeatBar();
         beatBar.setValue(0);
         JPanel bpmPanel = new JPanel(new GridLayout(2, 1));
         bpmPanel.add(beatBar);

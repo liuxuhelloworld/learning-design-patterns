@@ -1,6 +1,6 @@
-package mvc;
+package compound.mvc;
 
-public interface BeatModelInterface {
+public interface BeatModel {
     void initialize();
     void on();
     void off();

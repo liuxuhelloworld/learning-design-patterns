@@ -1,13 +1,13 @@
-package mvc;
+package compound.mvc;
 
 import javax.swing.*;
 
-public class BeatBar extends JProgressBar implements Runnable {
+public class DJBeatBar extends JProgressBar implements Runnable {
     private static final long serialVersionUID = 2L;
     JProgressBar progressBar;
     Thread thread;
 
-    public BeatBar() {
+    public DJBeatBar() {
         thread = new Thread(this);
         setMaximum(100);
         thread.start();

@@ -1,6 +1,6 @@
-package mvc;
+package compound.mvc;
 
-public interface ControllerInterface {
+public interface BeatController {
     void start();
     void stop();
     void increaseBPM();

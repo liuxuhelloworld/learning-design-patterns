@@ -1,10 +1,10 @@
-package mvc;
+package compound.mvc;
 
-public class BeatController implements ControllerInterface {
-    BeatModelInterface model;
+public class DJBeatController implements BeatController {
+    BeatModel model;
     DJView view;
 
-    public BeatController(BeatModelInterface model) {
+    public DJBeatController(BeatModel model) {
         this.model = model;
         view = new DJView(this, model);
         view.createView();
