@@ -1,5 +1,8 @@
-package builder;
+package builder.v3;
 
+/**
+ * builder pattern example
+ */
 public class NutritionFacts {
     private final int servingSize;
     private final int servings;
@@ -22,23 +25,23 @@ public class NutritionFacts {
             this.servings = servings;
         }
 
-        public Builder calories(int val) {
-            calories = val;
+        public Builder calories(int calories) {
+            this.calories =  calories;
             return this;
         }
 
-        public Builder fat(int val) {
-            fat = val;
+        public Builder fat(int fat) {
+            this.fat = fat;
             return this;
         }
 
-        public Builder sodium(int val) {
-            sodium = val;
+        public Builder sodium(int sodium) {
+            this.sodium = sodium;
             return this;
         }
 
-        public Builder carbohydrate(int val) {
-            carbohydrate = val;
+        public Builder carbohydrate(int carbohydrate) {
+            this.carbohydrate = carbohydrate;
             return this;
         }
 
